@@ -57,8 +57,8 @@ body {
   margin: 10px 0;
 }
 .btn {
+  border: 1px solid hsla(0, 0%, 100%, 0.75);
   margin: 20px 0;
-  border: none;
   cursor: pointer;
   outline: none;
   width: 60%;
@@ -78,10 +78,46 @@ body {
 }
 
 .attribution {
-    margin-top: 30px;
-    font-size: 11px;
-    text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+  body {
+    margin: 0;
   }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 890px;
   }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .card.orange {
+    border-radius: 10px 0 0 10px;
+  }
+  .card.green {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card.orange .btn:hover {
+    background: hsl(31, 77%, 52%);
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+
+  .card.blue .btn:hover {
+    background: hsl(184, 100%, 22%);
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+  .card.green .btn:hover {
+    background: hsl(179, 100%, 13%);
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+}
